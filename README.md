@@ -101,11 +101,9 @@ W modelu zaimplementowano **ponad 80 miar DAX**, zorganizowanych logicznie w fol
 ## 📌 Dodatkowe informacje
 
 * Raport zawiera **drill-through** do szczegółów produktu, regionu i sklepu
-* Wykorzystano **bookmarki, toggle, warunkowe tytuły, ikony trendu, dynamiczne kolory i tooltipy**
+* Wykorzystano **bookmarki, toggle, warunkowe tytuły, ikony trendu, dynamiczne kolory i tooltipy, Field Parameters**
 * Dane walutowe są prezentowane w **USD**
 * Dane filtrują się według: lat, miesięcy, kanałów sprzedaży, regionów, promocji, kategorii i produktów
-* Dodano możliwość **eksportu danych z wybranymi kolumnami (Field Parameters)**
-* Zastosowano mechanizm **RLS (Row-Level Security)** – użytkownik widzi dane tylko dla przypisanego kontynentu
 
 ---
 
