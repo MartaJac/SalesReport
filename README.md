@@ -121,28 +121,8 @@ DIVIDE(
 
 Oblicza procentową zmianę sprzedaży względem poprzedniego roku.
 
----
 
-### 🔹 2. Sprzedaż sklepów w tym samym mieście
-
-```DAX
-Sprzedaż sklepów w tym samym mieście =
-VAR _Miasto = SELECTEDVALUE(Sklep[Lokalizacja ID])
-RETURN
-CALCULATE(
-    [Sprzedaż],
-    FILTER(
-        ALL(Sklep),
-        Sklep[Lokalizacja ID] = _Miasto
-    )
-)
-```
-
-Pozwala porównać sprzedaż wybranego sklepu z innymi sklepami w tym samym mieście, z pominięciem aktywnego filtra sklepu.
-
----
-
-### 🔹 3. Udział sprzedaż vs koszt
+### 🔹 2. Udział sprzedaż vs koszt
 
 ```DAX
 Udział sprzedaż vs koszt =
