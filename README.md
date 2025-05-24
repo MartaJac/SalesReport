@@ -107,7 +107,7 @@ W modelu zaimplementowano **ponad 80 miar DAX**, zorganizowanych logicznie w fol
 
 ---
 
-## 🔢 Przykłady zaawansowanych miar DAX
+## 🔢 Przykłady miar DAX
 
 ### 🔹 1. Sprzedaż YoY (Year-over-Year)
 
@@ -144,3 +144,27 @@ DIVIDE(
     CALCULATE([Koszt], ALL(Produkt[Marka]))
 )
 ```
+Analiza efektywności marek: dodatnia wartość oznacza, że dana marka generuje proporcjonalnie więcej sprzedaży niż kosztów.
+
+
+### 🔹 3. Sprzedaż z promocją
+
+```DAX
+Sprzedaż z promocją =
+CALCULATE(
+    [Sprzedaż],
+    NOT ISBLANK(Sprzedaz[Promocja ID])
+)
+```
+
+Oblicza wartość sprzedaży tylko dla transakcji objętych promocją.
+
+
+### 🔹 4. txt Koszty YoY
+
+```DAX
+txt Koszty YoY =
+FORMAT([Koszt YoY], "0.00% ") & IF([Koszt YoY] > 0, "▼",  "▲")
+```
+
+Zwraca tekstowe przedstawienie zmiany kosztów YoY wraz z ikoną trendu: strzałką w dół lub górę, zależnie od wartości.
